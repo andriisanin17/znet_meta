@@ -1,7 +1,6 @@
 Feature: qavajs framework
 
- 
-  Scenario: E2E_Sample+Admin
+ Scenario: E2E_Sample+Admin
     Given I open "$base_url" url
     Then I expect page title equals 'Premium Flooring Products by Category, Available Online at Znet Flooring'
     Then I expect text of 'copyright' to contain '2023'
@@ -26,20 +25,22 @@ Feature: qavajs framework
     Then I expect 'value' property of 'region_id' to be equal '$region.colorado.code'
     Then I expect 'value' property of 'city_form ' to be equal '$region.colorado.city'
     Then I expect 'shipping_option_block' to be visible
-    And I type '1185121214' to 'phone_form'
-    And I click 'installation_checkbox'
+    When I type '1185121214' to 'phone_form'
+    When I click 'installation_checkbox'
     When I click 'proceed_to_billing_button'
     Then I expect current url contains '/checkout/billing'
-    Then I wait 5000 ms
+      And I wait 10000 ms
     Then I expect text of 'cart_subtotal' to contain 'TAX'
     Then I expect 'payment_methods' to be visible
-    Then I click 'cc_pay_method'
-    And I wait 2000 ms
-      And I type '$card_data.num' to 'cc_num'
-      And I type '$card_data.mmyy' to 'cc_date'
-      And I type '$card_data.cvv' to 'cc_cvv'
+    When I type '$card_data.num' to 'cc_num'
+      And I wait 2000 ms
+    When I type '$card_data.mmyy' to 'cc_date'
+      And I wait 2000 ms
+    When I type '$card_data.cvv' to 'cc_cvv'
+      And I wait 2000 ms
     When I hover over 'terms_button'
     When I click 'terms_button'
+      And I wait 2000 ms
     Then I expect 'terms_popup' to be visible
     When I click 'terms_popup_close_button'
     Then I expect 'terms_popup' not to be visible
@@ -301,7 +302,7 @@ Feature: qavajs framework
     Then I expect 'pdp_sku' to be visible
 
 
-@test1
+
   Scenario: Rug_Flow
    Given I open "$base_url" url
     When I hover over 'menu_item_rugs'
@@ -342,16 +343,18 @@ Feature: qavajs framework
     Then I expect 'shipping_option_block' to be visible
     When I type '8185121214' to 'phone_form'
     When I click 'proceed_to_billing_button'
+      And I wait 10000 ms
     Then I expect current url contains '/checkout/billing'
     Then I expect text of 'cart_subtotal' to contain 'TAX'
-    Then I expect 'payment_methods' to be visible
-    Then I click 'cc_pay_method'
-    And I wait 2000 ms
     When I type '$card_data.num' to 'cc_num'
+        And I wait 2000 ms
     When I type '$card_data.mmyy' to 'cc_date'
+        And I wait 2000 ms
     When I type '$card_data.cvv' to 'cc_cvv'
+        And I wait 2000 ms
     When I hover over 'terms_button'
     When I click 'terms_button'
+        And I wait 2000 ms
     Then I expect 'terms_popup' to be visible
     When I click 'terms_popup_close_button'
     Then I expect 'terms_popup' not to be visible

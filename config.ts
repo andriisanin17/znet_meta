@@ -2,7 +2,7 @@ import Memory from "./memory";
 import App from "./page_object";
 export default {
   defaultTimeout: 60000,
-  paths: ["features/cart.feature"],
+  paths: ["features/base_checks.feature"],
   require: ["step_definition/*.ts","node_modules/@qavajs/steps-playwright/index.js","node_modules/@qavajs/steps-memory/index.js"],
   requireModule: [],
   format: ["@qavajs/console-formatter","@qavajs/html-formatter:report/report.html"],
@@ -12,7 +12,8 @@ export default {
     screenshot: ["onFail"],
     capabilities: {
       browserName: "chromium",
-      headless: false 
+      headless: true
+    //args: ['--user-agent=Googlebot Desktop"']
     },
     timeout: {
                 present: 10000,

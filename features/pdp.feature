@@ -1,5 +1,5 @@
 Feature: qavajs framework
-
+@test
   Scenario: PDP_Flooring_noMAP
     Given I open "$base_url+$PDP_flooring_noMap_MSI" url
       And I wait 3000 ms

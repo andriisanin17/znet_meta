@@ -1,5 +1,5 @@
 export default class Constants {
-    base_url = 'https://cashncarrycarpet.net/';
+    base_url = 'https://znetflooring.com/';
     admin_url = '/admin_pwa/admin/'
     PDP_price_request = 'mohawk-solidtech-essentials-pro-solutions-smokey-grey';
     PDP_flooring_noMap_MSI = 'msi-everlife-xl-ashton-loton-hill';
@@ -8,7 +8,9 @@ export default class Constants {
     PDP_rug_parent = 'karastan-zula-mombasa-aquamarine-r1201';
     PDP_sample = 'pergo-elements-ultra-prestano-cocoa-mocha-hickory-sample';
     PDP_accessory = 'mohawk-s-performance-accessories-reducer-hredc-05998-conch-oak-red';
+    PDP_karndeam = 'karndean-art-select-stone-rigid-core-rose-onyx';
     PLP_msi = 'vinyl/msi-vinyl';
+    PLP_waterproof_flooring = 'waterproof-flooring';
     PLP_mohawk = 'hardwood-flooring/mohawk-hardwood';
     PLP_rugs = 'carpet/rugs/karastan-rugs';
     PLP_coretech = 'waterproof-flooring/coretec-waterproof';
