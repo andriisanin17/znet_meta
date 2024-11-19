@@ -12,7 +12,7 @@ export default {
     screenshot: ["onFail"],
     capabilities: {
       browserName: "chromium",
-      headless: true
+      headless: false
     //args: ['--user-agent=Googlebot Desktop"']
     },
     timeout: {

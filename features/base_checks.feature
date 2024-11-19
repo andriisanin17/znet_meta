@@ -16,6 +16,7 @@ Given I open "$base_url" url
     Then I expect 'content' attribute of 'meta_itemprop_addressLocality' to be equal 'Las Vegas, United States'
     Then I expect 'content' attribute of 'meta_itemprop_location' to be equal '10161 Park Run Dr. Ste 150 Las Vegas, NV 89145'
     Then I expect 'content' attribute of 'meta_itemprop_telephone' to be equal '7252010303'
+        And I wait 5000 ms
 
 
 Scenario: PLP
@@ -50,12 +51,13 @@ Given I open "$base_url+$PLP_waterproof_flooring " url
     Then I expect 'meta_itemprop_priceCurrency_PLP_item_offer' to be present
     Then I expect 'content' attribute of 'meta_itemprop_priceCurrency_PLP_item_offer' to be equal 'USD'
     Then I expect 'meta_itemprop_price_PLP_item_offer' to be present
+        And I wait 5000 ms
 
-    @test
+   
 Scenario: PDP
 Given I open "$base_url+$PDP_karndeam" url
         And I wait 7000 ms
-     Then I expect 'content' attribute of 'meta_title' to be equal 'Karndean - Art Select Stone Rigid Core - Rose Onyx | AKT-LM36'
+    Then I expect 'content' attribute of 'meta_title' to be equal 'Karndean - Art Select Stone Rigid Core - Rose Onyx | AKT-LM36'
     Then I expect 'content' attribute of 'meta_description' to be equal 'Art Select Stone Rigid Core Rose Onyx is a waterproof vinyl tile flooring by Karndean. This features a bevel edge and a 30 mil wear layer.'
     Then I expect 'content' attribute of 'meta_keywords' to be equal 'Karndean,Art Select Stone Rigid Core,Rose Onyx,,Virgin Vinyl,K-Guard Plus'
     Then I expect 'content' attribute of 'meta_robots' to be equal 'index, follow'
